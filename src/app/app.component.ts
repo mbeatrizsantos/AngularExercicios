@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { bootstrapApplication } from '@angular/platform-browser';
+
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  selector: 'app-meu-componente',
+  standalone: true,
+  imports: [CommonModule], // para usar *ngIf
+  templateUrl: './app.component.html', 
 })
-export class AppComponent {
-  title = 'entregavel3';
+export class MeuComponente {
+  status: string = 'sucesso';
 }
